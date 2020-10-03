@@ -18,24 +18,27 @@ import {
 } from 'reactstrap';
 
 const Home = () => {
-	const [card, setCard] = useState();
+	//State to pass to render cards
+	const [cards, setCards] = useState([]);
+	//State for reactstrap navbar toggle
 	const [isOpen, setIsOpen] = useState(false);
+	//State to pass for API call to search cards
 	const [searchCard, setSearchCard] = useState('knight');
 
 	const toggle = () => setIsOpen(!isOpen);
-
+	
+	
 	useEffect(() => {
 		const url = `https://api.scryfall.com/cards/search?q=${searchCard}`;
 		const scryFetch = async (url) => {
 			const response = await fetch(url);
 			const data = await response.json();
-			setCard(data);
 			console.log(data);
+			setCards(data.data);
 		};
-
 		scryFetch(url);
 	}, [searchCard]);
-
+	console.log("This is cards: ", cards);
 	return (
 		<div>
 			<Navbar color='dark' dark expand='md'>
@@ -64,7 +67,7 @@ const Home = () => {
 					<NavbarText>Simple Text</NavbarText>
 				</Collapse>
 			</Navbar>
-			{/*<SearchCardList card={card} />*/}
+			<SearchCardList cards={cards} />
 		</div>
 	);
 };

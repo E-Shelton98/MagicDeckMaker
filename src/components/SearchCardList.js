@@ -1,9 +1,12 @@
 import React from 'react';
 
-const SearchCardList = (props) => {
-	console.log(props);
+const SearchCardList = ({cards}) => {
+	
+	if(cards) {
+		console.log('This is cards: ', cards[0]);
 
-	function displayCards(c, index) {
+	}
+	/*function displayCards(c, index) {
 		let cardData = '';
 		if (c.data) {
 			cardData = (
@@ -15,7 +18,9 @@ const SearchCardList = (props) => {
 		return <div>{cardData}</div>;
 	}
 
-	props.card.forEach(displayCards);
+	
+	//props.card.forEach(displayCards);*/
+	return <h1>Hello</h1>
 };
 
 export default SearchCardList;
