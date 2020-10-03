@@ -12,9 +12,11 @@ const SearchCardList = (props) => {
 							{c.name}
 						</span>
 				)
-			return <div key={index}>{cardSpan}</div>
 			}
+			return <div key={index}>{cardSpan}</div>
+			
 	}
+
 	cardDivs = props.cards.map(displayCards);
 
 	return (
