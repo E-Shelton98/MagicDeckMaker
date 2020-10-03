@@ -1,12 +1,14 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import APICall from './components/APICall'
+import Home from "./components/Home"
 
 function App() {
+  
+
   return (
     <div className="App">
-      <APICall />
+      <Home />
     </div>
   );
 }
