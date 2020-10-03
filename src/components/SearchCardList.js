@@ -1,26 +1,27 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-const SearchCardList = ({cards}) => {
-	
-	if(cards) {
-		console.log('This is cards: ', cards[0]);
+const SearchCardList = (props) => {
+	let cardDivs = "Loading"
 
-	}
-	/*function displayCards(c, index) {
-		let cardData = '';
-		if (c.data) {
-			cardData = (
+	function displayCards(c, index) {
+		let cardSpan = ""
+		if (c.name) {
+			cardSpan = (
 				<span>
-					{c.name}, {index}
+					{c.name}
 				</span>
 			);
 		}
-		return <div>{cardData}</div>;
+		return <div key={index}>{cardSpan}</div>;
 	}
 
-	
-	//props.card.forEach(displayCards);*/
-	return <h1>Hello</h1>
+	cardDivs = props.cards.map(displayCards);
+
+	return (
+		<>
+			{cardDivs}
+		</>
+	)
 };
 
 export default SearchCardList;
