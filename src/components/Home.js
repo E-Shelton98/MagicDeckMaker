@@ -23,7 +23,7 @@ const Home = () => {
 	//State for reactstrap navbar toggle
 	const [isOpen, setIsOpen] = useState(false);
 	//State to pass for API call to search cards
-	const [searchCard, setSearchCard] = useState('knight');
+	const [searchCard, setSearchCard] = useState('');
 
 	const toggle = () => setIsOpen(!isOpen);
 	
