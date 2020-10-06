@@ -1,14 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
+import DisplaySearchCard from './DisplaySearchCard'
 
 const SearchCardList = (props) => {
-	let cardDivs = "Loading"
+	const [clickedCard, setClickedCard] = useState()
+	
+	console.log(props)
+	let cardDivs = "Loading..."
+	
+	const handleClick = (card) => {
+		console.log("this is handleclick", card)
+		props.onClickFromHome(card)
+	}
+
 	
 	
 	function displayCards(c, index) {
 		let cardSpan = ""
 		if (c.name) {
 			cardSpan = (
-				<span>
+				<span onClick={() => handleClick(c)}>
 					{c.name}
 				</span>
 				
@@ -16,14 +26,15 @@ const SearchCardList = (props) => {
 		}
 		return <div key={index}>{cardSpan}</div>;
 	}
-
+	
+	
 	cardDivs = props.cards.map(displayCards);
-
+	
 	return (
-		<div className="cards">
+		<div className='cards'>
 			{cardDivs}
 		</div>
-	)
+	);
 };
 
 export default SearchCardList

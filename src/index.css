@@ -40,3 +40,21 @@ button.btn {
   padding-left: 20px;
   
 }
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+form.card-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+button.add-to-deck {
+  width: 60%;
+}
+
+#card-amount {
+  width: 15% !important;
+}
