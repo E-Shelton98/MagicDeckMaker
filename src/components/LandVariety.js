@@ -2,8 +2,6 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 const LandVariety = (props) => {
-	console.log('ColorVariety Deck: ', props.deck);
-
 	let multi = 0,
 		white = 0,
 		blue = 0,
@@ -12,18 +10,18 @@ const LandVariety = (props) => {
 		green = 0;
 
 	for (const card of props.deck) {
-		if (card.name) {
-			multi += 1;
-		} else if (card.colors[0] === 'W') {
+		if (card.type_line === 'Basic Land — Plains') {
 			white += 1;
-		} else if (card.colors[0] === 'U') {
+		} else if (card.type_line === 'Basic Land — Island') {
 			blue += 1;
-		} else if (card.colors[0] === 'B') {
+		} else if (card.type_line === 'Basic Land — Swamp') {
 			black += 1;
-		} else if (card.colors[0] === 'R') {
+		} else if (card.type_line === 'Basic Land — Mountain') {
 			red += 1;
-		} else if (card.colors[0] === 'G') {
+		} else if (card.type_line === 'Basic Land — Forest') {
 			green += 1;
+		} else if (card.type_line === 'Land') {
+			multi += 1;
 		}
 	}
 	const state = {
@@ -38,13 +36,13 @@ const LandVariety = (props) => {
 	};
 
 	return (
-		<div className='CMCVarietyChart'>
+		<div className='LandVarietyChart'>
 			<Doughnut
 				data={state}
 				options={{
 					title: {
 						display: true,
-						text: 'Color Variety',
+						text: 'Land Variety',
 						fontSize: 20,
 					},
 					legend: {

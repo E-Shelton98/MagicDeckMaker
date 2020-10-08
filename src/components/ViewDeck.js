@@ -4,6 +4,7 @@ import DisplayDeckCards from './DisplayDeckCards'
 import ViewDeckCardDisplay from './ViewDeckCardDisplay'
 import CMCVariety from './CMCVariety'
 import ColorVariety from './ColorVariety'
+import LandVariety from './LandVariety'
 
 const ViewDeck = (props) => {
     
@@ -20,6 +21,7 @@ const ViewDeck = (props) => {
         {clickedCard ? ( <ViewDeckCardDisplay card={clickedCard} />) : ( <span>Click a card</span>)}
         <CMCVariety deck={props.deck}/>
         <ColorVariety deck={props.deck}/>
+        <LandVariety deck={props.deck}/>
         </>
     )
 }
