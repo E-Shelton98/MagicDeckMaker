@@ -4,15 +4,15 @@ const DisplayDeckCards = (props) => {
 
     let cardDivs = "Loading..."
 
-    /*const handleClick = (card) => {
-        props.onClickFromDisplayDeck(card)
-    }*/
+    const handleClick = (card) => {
+        props.onClickFromViewDeck(card)
+    }
 
     function displayCards(c, index) {
         let cardSpan = ""
         if (c.name) {
             cardSpan = (
-                <span>
+                <span onClick ={() => handleClick(c)}>
                     {c.name}
                 </span>
             )

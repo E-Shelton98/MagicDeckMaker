@@ -18,6 +18,7 @@ function App() {
 		}
 		if (addedCards[0]) {
       const newDeck = deck;
+      console.log('this is newDeck :', newDeck)
       for (const item of addedCards){
         newDeck.push(item)
       }
@@ -25,15 +26,6 @@ function App() {
       console.log('this is deck in App: ', deck);
 		}
 	};
-
-	/*if (deck === false) {
-		addToDeck();
-	} else {
-		addToDeck();
-	}*/
-  
-  
-  
   
   return (
     <div className="App">
