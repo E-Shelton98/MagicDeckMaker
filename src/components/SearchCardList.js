@@ -1,14 +1,10 @@
-import React, {useState} from 'react';
-import DisplaySearchCard from './DisplaySearchCard'
+import React from 'react';
 
 const SearchCardList = (props) => {
-	const [clickedCard, setClickedCard] = useState()
 	
-	console.log(props)
 	let cardDivs = "Loading..."
 	
 	const handleClick = (card) => {
-		console.log("this is handleclick", card)
 		props.onClickFromHome(card)
 	}
 

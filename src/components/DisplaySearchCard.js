@@ -1,14 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Form, Button, Input
 } from 'reactstrap';
 
 const Example = (props) => {
-  console.log("This is DisplaySearchCard Props: ", props)
-  console.log("This is art_crop: ",props.card.image_uris.art_crop)
-  
+  const [amount, setAmount] = useState("")
+  const [card, setCard] = useState()
 
+  
+  const handleSelectChange = (e) => {
+    setAmount(e.currentTarget.value)
+    setCard(props.card)
+    e.preventDefault()
+  }
+  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    props.addToDeck(card, amount)
+  }
   return (
 		<div>
 			<Card>
@@ -25,14 +35,14 @@ const Example = (props) => {
 						<CardSubtitle>{props.card.type_line}</CardSubtitle>
 					</div>
 					<CardText>{props.card.oracle_text}</CardText>
-					<Form className="card-form">
+					<Form className="card-form" onSubmit={handleSubmit}>
 						<Button className="add-to-deck">Add to Deck</Button>
-						<Input type='select' id="card-amount">
-							<option>1</option>
-							<option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </Input>
+						<Input type='select' id="card-amount" onChange={handleSelectChange}>
+							<option value="1">1</option>
+							<option value="2">2</option>
+              				<option value="3">3</option>
+              				<option value="4">4</option>
+            			</Input>
 					</Form>
 				</CardBody>
 			</Card>
