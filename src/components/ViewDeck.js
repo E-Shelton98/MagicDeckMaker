@@ -5,6 +5,7 @@ import ViewDeckCardDisplay from './ViewDeckCardDisplay'
 import CMCVariety from './CMCVariety'
 import ColorVariety from './ColorVariety'
 import LandVariety from './LandVariety'
+import SpellTypeBar from './SpellTypeBar'
 
 const ViewDeck = (props) => {
     
@@ -22,6 +23,7 @@ const ViewDeck = (props) => {
         <CMCVariety deck={props.deck}/>
         <ColorVariety deck={props.deck}/>
         <LandVariety deck={props.deck}/>
+        <SpellTypeBar deck={props.deck}/>
         </>
     )
 }

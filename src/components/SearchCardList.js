@@ -1,6 +1,10 @@
 import React from 'react';
 
 const SearchCardList = (props) => {
+	if (props.cards === undefined){
+		return(<h3>Invalid Search, Possible Mispelling?</h3>)
+	}
+	else {
 	
 	let cardDivs = "Loading..."
 	
@@ -31,6 +35,7 @@ const SearchCardList = (props) => {
 			{cardDivs}
 		</div>
 	);
+	}
 };
 
 export default SearchCardList

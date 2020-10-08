@@ -1,54 +1,57 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 
-const CMCVariety = (props) => {
+const SpellTypeBar = (props) => {
 	console.log('CMCVariety Deck: ', props.deck);
 
-	let cmc0or1 = 0,
-		cmc2 = 0,
-		cmc3 = 0,
-		cmc4 = 0,
-		cmc5 = 0,
-		cmc6orhigher = 0,
-		land = 0;
+	let artifact = 0,
+		conspiracy = 0,
+		creature = 0,
+		enchantment = 0,
+		instant = 0,
+		phenomenon = 0,
+        plane = 0,
+        planeswalker = 0,
+        scheme = 0,
+		sorcery = 0,
+		tribal = 0,
+		vanguard = 0;
 
 	for (const card of props.deck) {
-		console.log(card.type_line);
-		if (card.cmc === 0 || card.cmc === 1) {
-			if (card.type_line === 'Land') {
-				land += 1;
-			} else if (card.type_line === 'Basic Land — Plains') {
-				land += 1;
-			} else if (card.type_line === 'Basic Land — Island') {
-				land += 1;
-			} else if (card.type_line === 'Basic Land — Swamp') {
-				land += 1;
-			} else if (card.type_line === 'Basic Land — Mountain') {
-				land += 1;
-			} else if (card.type_line === 'Basic Land — Forest') {
-				land += 1;
-			} else {
-				cmc0or1 += 1;
-			}
-		} else if (card.cmc === 2) {
-			cmc2 += 1;
-		} else if (card.cmc === 3) {
-			cmc3 += 1;
-		} else if (card.cmc === 4) {
-			cmc4 += 1;
-		} else if (card.cmc === 5) {
-			cmc5 += 1;
-		} else if (card.cmc === 6) {
-			cmc6orhigher += 1;
-		}
+        const str = card.type_line
+        if (str.includes('Artifact')) {
+					artifact += 1;
+				} else if (str.includes('Conspiracy')) {
+					conspiracy += 1;
+				} else if (str.includes('Creature')) {
+					creature += 1;
+				} else if (str.includes('Enchantment')) {
+					enchantment += 1;
+				} else if (str.includes('Instant')) {
+					instant += 1;
+				} else if (str.includes('Phenomenon')) {
+					phenomenon += 1;
+				} else if (str.includes('Plane')) {
+					plane += 1;
+				} else if (str.includes('Planeswalker')) {
+					planeswalker += 1;
+				} else if (str.includes('Scheme')) {
+					scheme += 1;
+				} else if (str.includes('Sorcery')) {
+					sorcery += 1;
+				} else if (str.includes('Tribal')) {
+					tribal += 1;
+				} else if (str.includes('Vanguard')) {
+					vanguard += 1;
+				}
 	}
 	const state = {
-		labels: ['0-1', '2', '3', '4', '5', '6+', 'land'],
+		labels: ['artifacts', 'conspiracies', 'creatures', 'enchantments', 'instants', 'phenomenons', 'planes', 'planeswalkers', 'schemes', 'sorceries', 'tribals', 'vanguards'],
 		datasets: [
 			{
 				label: 'CMCVariety',
 				backgroundColor: 'orange',
-				data: [cmc0or1, cmc2, cmc3, cmc4, cmc5, cmc6orhigher, land],
+				data: [artifact, conspiracy, creature, enchantment, instant, phenomenon, plane, planeswalker, scheme, sorcery, tribal, vanguard],
 			},
 		],
 	};
@@ -60,16 +63,23 @@ const CMCVariety = (props) => {
 				options={{
 					title: {
 						display: true,
-						text: 'CMC Variety',
+						text: 'Spell Type Variety',
 						fontSize: 20,
 					},
 					legend: {
 						display: false,
-					},
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
 				}}
 			/>
 		</div>
 	);
 };
 
-export default CMCVariety;
+export default SpellTypeBar;
