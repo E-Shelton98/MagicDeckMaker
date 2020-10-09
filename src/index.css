@@ -50,7 +50,7 @@ button.btn {
   font-size: 12px;
 }
 
-.cardInfo {
+.card-info {
   display: flex;
   justify-content: space-between;
 }
@@ -68,7 +68,7 @@ button.add-to-deck {
   width: 15% !important;
 }
 
-.deckCards {
+.deck-cards {
   text-align: left;
   display: flex;
   flex-direction: column;

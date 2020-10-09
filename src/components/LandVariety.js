@@ -36,7 +36,7 @@ const LandVariety = (props) => {
 	};
 
 	return (
-		<div className='LandVarietyChart'>
+		<div className='land-variety-chart'>
 			<Doughnut
 				data={state}
 				options={{

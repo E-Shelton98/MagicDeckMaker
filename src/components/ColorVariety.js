@@ -2,7 +2,6 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 const ColorVariety = (props) => {
-	console.log('ColorVariety Deck: ', props.deck);
 
 	let multi = 0,
 		white = 0,
@@ -45,7 +44,7 @@ const ColorVariety = (props) => {
 	};
 
 	return (
-		<div className='CMCVarietyChart'>
+		<div className='color-variety-chart'>
 			<Doughnut
 				data={state}
 				options={{

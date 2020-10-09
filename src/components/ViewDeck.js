@@ -20,10 +20,12 @@ const ViewDeck = (props) => {
         <NavBar/>
         <DisplayDeckCards deck={props.deck} onClickFromViewDeck={handleClick}/>
         {clickedCard ? ( <ViewDeckCardDisplay card={clickedCard} />) : ( <span>Click a card</span>)}
-        <CMCVariety deck={props.deck}/>
-        <ColorVariety deck={props.deck}/>
-        <LandVariety deck={props.deck}/>
-        <SpellTypeBar deck={props.deck}/>
+        <div className="charts">
+            <CMCVariety deck={props.deck}/>
+            <ColorVariety deck={props.deck}/>
+            <LandVariety deck={props.deck}/>
+            <SpellTypeBar deck={props.deck}/>
+        </div>
         </>
     )
 }

@@ -23,7 +23,7 @@ const DisplayDeckCards = (props) => {
     cardDivs = props.deck.map(displayCards)
 
     return (
-        <div className='deckCards'>
+        <div className='deck-cards'>
             {cardDivs}
         </div>
     )

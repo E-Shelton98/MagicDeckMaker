@@ -2,7 +2,6 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 
 const SpellTypeBar = (props) => {
-	console.log('CMCVariety Deck: ', props.deck);
 
 	let artifact = 0,
 		conspiracy = 0,
@@ -57,7 +56,7 @@ const SpellTypeBar = (props) => {
 	};
 
 	return (
-		<div className='CMCVarietyChart'>
+		<div className='spell-type-chart'>
 			<Bar
 				data={state}
 				options={{

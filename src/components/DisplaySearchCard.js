@@ -40,7 +40,7 @@ const Example = (props) => {
 				/>
 				<CardBody>
 					<CardTitle>{props.card.artist}</CardTitle>
-					<div className='cardInfo'>
+					<div className='card-info'>
 						<CardSubtitle>{props.card.set_name}</CardSubtitle>
 						<CardSubtitle>{props.card.type_line}</CardSubtitle>
 					</div>

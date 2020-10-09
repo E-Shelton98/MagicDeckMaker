@@ -2,8 +2,6 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 
 const CMCVariety = (props) => {
-	console.log('CMCVariety Deck: ', props.deck);
-
 	let cmc0or1 = 0,
 		cmc2 = 0,
 		cmc3 = 0,
@@ -54,7 +52,7 @@ const CMCVariety = (props) => {
 	};
 
 	return (
-		<div className='CMCVarietyChart'>
+		<div className='cmc-variety-chart'>
 			<Bar
 				data={state}
 				options={{
