@@ -1,0 +1,53 @@
+@media only screen and (max-width: 425px) {
+    img.vd-card-display {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    div.cards-list, div.display-search-card {
+        width: 50%;
+
+    }
+
+    div.cards-list {
+        height: 350px;
+        overflow-y: scroll;
+    }
+    
+    
+    main.home-main {
+        display: flex;
+    }
+
+    div.deck-cards {
+        width: 50%;
+        height: 400px;
+    }
+
+    main.vd-main {
+        display: flex;
+    }
+
+    img.vd-card-display {
+        background: lightgray;
+        height: 60%;
+    }
+
+    div.color-variety-chart {
+        height: 50%;
+        width: 50%;
+    }
+
+    div.land-variety-chart {
+        height: 50%;
+        width: 50%;
+    }
+
+    div.doughnut-charts {
+        display: flex;
+    }
+
+    
+}

@@ -55,6 +55,8 @@ const CMCVariety = (props) => {
 			<Bar
 				data={state}
 				options={{
+					responsive: true,
+					maintainAspectRatio: false,
 					title: {
 						display: true,
 						text: 'CMC Variety',

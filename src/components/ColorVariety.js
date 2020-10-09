@@ -48,6 +48,7 @@ const ColorVariety = (props) => {
 			<Doughnut
 				data={state}
 				options={{
+					responsive: true,
 					title: {
 						display: true,
 						text: 'Color Variety',

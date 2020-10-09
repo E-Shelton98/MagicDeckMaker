@@ -60,6 +60,7 @@ const SpellTypeBar = (props) => {
 			<Bar
 				data={state}
 				options={{
+					responsive: true,
 					title: {
 						display: true,
 						text: 'Spell Type Variety',

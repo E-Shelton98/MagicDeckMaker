@@ -17,7 +17,7 @@ const DisplayDeckCards = (props) => {
                 </span>
             )
         }
-        return <div key={index}>{cardSpan}</div>
+        return <div className="deck-card-divs" key={index}>{cardSpan}</div>
     }
 
     cardDivs = props.deck.map(displayCards)

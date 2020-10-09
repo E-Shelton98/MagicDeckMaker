@@ -34,9 +34,12 @@ const Home = (props) => {
 	return (
 		<>
 			<NavBar />
-			<CardSearch onSubmitFromHome={handleSubmit} />
-			{cards ?(<SearchCardList cards={cards} onClickFromHome={handleClick} />) : (<span>Search for a card name</span>)}
-			{clickedCard ? ( <DisplaySearchCard card={clickedCard} addToDeck={props.addToDeck} /> ) : ( <span>Click a card</span> )}
+			
+				<CardSearch onSubmitFromHome={handleSubmit} />
+			<main className="home-main">
+				{cards ?(<SearchCardList cards={cards} onClickFromHome={handleClick} />) : (<span>Search for a card</span>)}
+				{clickedCard ? ( <DisplaySearchCard card={clickedCard} addToDeck={props.addToDeck} /> ) : ( <span>Click a card to view info</span> )}
+			</main>
 		</>
 	);
 };

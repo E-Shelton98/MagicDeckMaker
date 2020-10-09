@@ -24,14 +24,14 @@ const SearchCardList = (props) => {
 				
 			);
 		}
-		return <div key={index}>{cardSpan}</div>;
+		return <div className="cards" key={index}>{cardSpan}</div>;
 	}
 	
 	
 	cardDivs = props.cards.map(displayCards);
 	
 	return (
-		<div className='cards'>
+		<div className='cards-list'>
 			{cardDivs}
 		</div>
 	);

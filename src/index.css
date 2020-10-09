@@ -18,6 +18,10 @@ code {
     monospace;
 }
 
+div.App {
+  background-color: lightgray;
+}
+
 .form-control {
   border-radius: 0px !important;
 }
@@ -31,14 +35,25 @@ button.btn {
   border-radius: 0px;
 }
 
-.cards {
+.cards-list {
   text-align: left;
   display: flex;
   flex-direction: column;
   overflow-Y: scroll;
-  height: 150px;
-  padding-left: 20px;
+  height: 200px;
   
+  
+}
+
+.cards {
+  border: 1px solid gray;
+  padding: 20px;
+  height: 50px !important;
+  vertical-align: center;
+}
+
+.display-search-card {
+  padding: 20px;
 }
 
 .card-body {
@@ -65,7 +80,7 @@ button.add-to-deck {
 }
 
 #card-amount {
-  width: 15% !important;
+  width: 20% !important;
 }
 
 .deck-cards {
@@ -73,7 +88,17 @@ button.add-to-deck {
   display: flex;
   flex-direction: column;
   overflow-Y: scroll;
-  height: 150px;
-  padding-left: 20px;
-  
+  height: 200px;
+}
+
+.deck-card-divs {
+  border: 1px solid gray;
+  padding: 20px;
+  height: 50px !important;
+  vertical-align: center;
+}
+
+.cmc-variety-chart {
+  height: 100%;
+  width: 100%;
 }

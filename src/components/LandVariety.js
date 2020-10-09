@@ -40,6 +40,7 @@ const LandVariety = (props) => {
 			<Doughnut
 				data={state}
 				options={{
+					responsive: true,
 					title: {
 						display: true,
 						text: 'Land Variety',

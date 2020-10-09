@@ -26,7 +26,7 @@ const Example = (props) => {
 	};
 
 	return (
-		<div>
+		<div className="display-search-card">
 			<Card>
 				<CardImg
 					top
