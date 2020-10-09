@@ -64,12 +64,15 @@ Time frames are also key in the development cycle. You have limited time to code
 | MVP                      | Priority | Estimated Time | Time Invetsted | Actual Time |
 | ------------------------ | :------: | :------------: | :------------: | :---------: |
 | Pulling API Data         |    H     |      2hrs      |      2hrs      |    2hrs     |
-| Displaying Search Result |    H     |      2hrs      |      2hrs      |     hrs     |
-| Adding Card to Deck      |    H     |      2hrs      |      5hrs      |     hrs     |
+| Displaying Search Result |    H     |      2hrs      |      4hrs      |     hrs     |
+| Adding Card to Deck      |    H     |      2hrs      |      6hrs      |     hrs     |
 | Displaying Data on Home  |    M     |      3hrs      |      hrs       |     hrs     |
 | Display Deck on ViewDeck |    M     |      2hrs      |      1hrs      |     hrs     |
-| Display Data on ViewDeck |    H     |      2hrs      |      2hrs      |     hrs     |
-| Total                    |    H     |     13hrs      |      8hrs      |     hrs     |
+| Display Data on ViewDeck |    H     |      2hrs      |      4hrs      |     hrs     |
+| Styling                  |    M     |      3hrs      |      hrs       |             |
+| Total                    |    H     |     13hrs      |     17hrs      |     hrs     |
+
+I didn't break down these tasks enough, and ran into many bugs in spots I didn't account for so the time spent is actually longer but I didn't do a good job this time around of keeping up on updating the project sheet.
 
 | MVP+                           | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------ | :------: | :------------: | :-----------: | :---------: |
@@ -93,7 +96,33 @@ For HTML5 Charts...possibly...
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+for (const card of props.deck) {
+		if (card.cmc === 0 || card.cmc === 1) {
+			if (card.type_line === 'Land') {
+				land += 1;
+			} else if (card.type_line === 'Basic Land — Plains') {
+				land += 1;
+			} else if (card.type_line === 'Basic Land — Island') {
+				land += 1;
+			} else if (card.type_line === 'Basic Land — Swamp') {
+				land += 1;
+			} else if (card.type_line === 'Basic Land — Mountain') {
+				land += 1;
+			} else if (card.type_line === 'Basic Land — Forest') {
+				land += 1;
+			} else {
+				cmc0or1 += 1;
+			}
+		} else if (card.cmc === 2) {
+			cmc2 += 1;
+		} else if (card.cmc === 3) {
+			cmc3 += 1;
+		} else if (card.cmc === 4) {
+			cmc4 += 1;
+		} else if (card.cmc === 5) {
+			cmc5 += 1;
+		} else if (card.cmc === 6) {
+			cmc6orhigher += 1;
+		}
+	}
 ```
