@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# mtg-deck-maker
 
-## Available Scripts
+mtg-deck-maker is an application built with React used for easily and efficiently creating Magic the Gathering decks and viewing relevant deck data such as mana costs, color balance, and spell types.
 
-In the project directory, you can run:
+# Motivation
 
-### `npm start`
+I am a big fan of MTG, and recently I have been struggling with finding a deck maker that I enjoy to use, so I decided I would simply build my own as a little side project.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Tech Used
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This program is currently built with React, and Chart.js while using react-chartjs-2.
 
-### `npm test`
+The API used is ScryFall
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Code Style
 
-### `npm run build`
+Currently the program is using standard camelCase JS and kebab-case CSS.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Features
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Currently you can create a deck of x amount of cards, view details on the cards, and view charts that give you data on the deck such as mana curve, color variety, spell variety, land amount and land color variety.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Future features include the ability to remove cards from a deck, create and save multiple decks, handling and creation of a full collection adn viewing appropriate data, and many more. More exact details are listed on the about page in the program.
 
-### `npm run eject`
+# Credits
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Thanks again to Anthony Gregis for helping me out with my bug on DisplaySearchCards.js
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Credit to Chase Wood, he has been working with the same API as me for his own style of project and we both helped each other out a few times being another set of eyes or figuring out this API. Thanks again Chase!
