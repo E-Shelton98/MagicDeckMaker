@@ -22,7 +22,7 @@ const About = () => {
 			</p>
 			<p>
 				There are a few minor bugs/future functional things that still need
-				worked out to be aware of such as...
+				worked out to be aware of such as...</p>
 				<span>
 					<ul>
 						<li>
@@ -64,7 +64,8 @@ const About = () => {
 						</li>
 					</ul>
 				</span>
-				So yeah... that's the current future plans for this project and I'll
+			<p>
+                So yeah... that's the current future plans for this project and I'll
 				make sure to update them here and there as new plans come along. So if
 				you like the app, I encourage you to use it, or at least check in with
 				it regularly! I'm going to somewhat routinely work on this as a fun side

@@ -11,7 +11,6 @@ const CMCVariety = (props) => {
 		land = 0;
 
 	for (const card of props.deck) {
-		console.log(card.type_line);
 		if (card.cmc === 0 || card.cmc === 1) {
 			if (card.type_line === 'Land') {
 				land += 1;

@@ -18,12 +18,10 @@ function App() {
 		}
 		if (addedCards[0]) {
 			const newDeck = deck;
-			console.log('this is newDeck :', newDeck);
 			for (const item of addedCards) {
 				newDeck.push(item);
 			}
 			setDeck(newDeck);
-			console.log('this is deck in App: ', deck);
 		}
 	};
 

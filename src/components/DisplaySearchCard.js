@@ -15,13 +15,9 @@ const Example = (props) => {
 	const [amount, setAmount] = useState('');
 	const [card, setCard] = useState();
 
-	const newCard = props.card
-	console.log(newCard)
-	console.log("This is card:", card, newCard)
 	const handleSelectChange = (e) => {
 		setAmount(e.currentTarget.value);
-		setCard(newCard)
-		console.log("handleSelect Card: ", card)
+		setCard(props.card)
 	};
 
 	const handleSubmit = (e) => {
