@@ -1,25 +1,35 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Form, Button, Input
+	Card,
+	CardImg,
+	CardText,
+	CardBody,
+	CardTitle,
+	CardSubtitle,
+	Form,
+	Button,
+	Input,
 } from 'reactstrap';
 
 const Example = (props) => {
-  const [amount, setAmount] = useState("")
-  const [card, setCard] = useState()
+	const [amount, setAmount] = useState('');
+	const [card, setCard] = useState();
 
-  
-  const handleSelectChange = (e) => {
-    setAmount(e.currentTarget.value)
-    setCard(props.card)
-    e.preventDefault()
-  }
-  
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    props.addToDeck(card, amount)
-  }
-  return (
+	const newCard = props.card
+	console.log(newCard)
+	console.log("This is card:", card, newCard)
+	const handleSelectChange = (e) => {
+		setAmount(e.currentTarget.value);
+		setCard(newCard)
+		console.log("handleSelect Card: ", card)
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		props.addToDeck(card, amount);
+	};
+
+	return (
 		<div>
 			<Card>
 				<CardImg
@@ -35,20 +45,20 @@ const Example = (props) => {
 						<CardSubtitle>{props.card.type_line}</CardSubtitle>
 					</div>
 					<CardText>{props.card.oracle_text}</CardText>
-					<Form className="card-form" onSubmit={handleSubmit}>
-						<Button className="add-to-deck">Add to Deck</Button>
-						<Input type='select' id="card-amount" onChange={handleSelectChange}>
-							<option value="1">1</option>
-							<option value="2">2</option>
-              				<option value="3">3</option>
-              				<option value="4">4</option>
-            			</Input>
+					<Form className='card-form' onSubmit={handleSubmit}>
+						<Button className='add-to-deck'>Add to Deck</Button>
+						<Input type='select' defaultValue={0} id='card-amount' onChange={handleSelectChange}>
+							<option value='0'>0</option>
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+							<option value='4'>4</option>
+						</Input>
 					</Form>
 				</CardBody>
 			</Card>
 		</div>
 	);
-
 };
 
 export default Example;

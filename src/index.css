@@ -41,6 +41,15 @@ button.btn {
   
 }
 
+.card-body {
+  padding-top: 0px !important;
+}
+
+.card-title {
+  text-align: left;
+  font-size: 12px;
+}
+
 .cardInfo {
   display: flex;
   justify-content: space-between;
@@ -57,4 +66,14 @@ button.add-to-deck {
 
 #card-amount {
   width: 15% !important;
+}
+
+.deckCards {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow-Y: scroll;
+  height: 150px;
+  padding-left: 20px;
+  
 }

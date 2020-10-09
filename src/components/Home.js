@@ -10,7 +10,7 @@ const Home = (props) => {
 	//State to pass to render cards
 	const [cards, setCards] = useState([]);
 	//State to pass for API call to search cards
-	const [searchCard, setSearchCard] = useState('Knight')
+	const [searchCard, setSearchCard] = useState('')
 	const [clickedCard, setClickedCard] = useState()
 	//const [deck, setDeck] = useState([])
 	const handleSubmit = (input) => {
@@ -35,7 +35,7 @@ const Home = (props) => {
 		<>
 			<NavBar />
 			<CardSearch onSubmitFromHome={handleSubmit} />
-			<SearchCardList cards={cards} onClickFromHome={handleClick} />
+			{cards ?(<SearchCardList cards={cards} onClickFromHome={handleClick} />) : (<span>Search for a card name</span>)}
 			{clickedCard ? ( <DisplaySearchCard card={clickedCard} addToDeck={props.addToDeck} /> ) : ( <span>Click a card</span> )}
 		</>
 	);

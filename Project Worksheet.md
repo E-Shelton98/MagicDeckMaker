@@ -64,12 +64,12 @@ Time frames are also key in the development cycle. You have limited time to code
 | MVP                      | Priority | Estimated Time | Time Invetsted | Actual Time |
 | ------------------------ | :------: | :------------: | :------------: | :---------: |
 | Pulling API Data         |    H     |      2hrs      |      2hrs      |    2hrs     |
-| Displaying Search Result |    H     |      2hrs      |      hrs       |     hrs     |
-| Adding Card to Deck      |    H     |      2hrs      |      hrs       |     hrs     |
+| Displaying Search Result |    H     |      2hrs      |      2hrs      |     hrs     |
+| Adding Card to Deck      |    H     |      2hrs      |      5hrs      |     hrs     |
 | Displaying Data on Home  |    M     |      3hrs      |      hrs       |     hrs     |
-| Display Deck on ViewDeck |    M     |      2hrs      |      hrs       |     hrs     |
-| Display Data on ViewDeck |    H     |      2hrs      |      hrs       |     hrs     |
-| Total                    |    H     |     13hrs      |      5hrs      |     hrs     |
+| Display Deck on ViewDeck |    M     |      2hrs      |      1hrs      |     hrs     |
+| Display Data on ViewDeck |    H     |      2hrs      |      2hrs      |     hrs     |
+| Total                    |    H     |     13hrs      |      8hrs      |     hrs     |
 
 | MVP+                           | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------ | :------: | :------------: | :-----------: | :---------: |
