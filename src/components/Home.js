@@ -39,12 +39,12 @@ const Home = (props) => {
 				{cards ? (
 					<CardSearchList cards={cards} onClickFromHome={handleClick} />
 				) : (
-					""
+					" "
 				)}
 				{clickedCard ? (
 					<DisplaySearchCard card={clickedCard} addToDeck={props.addToDeck} />
 				) : (
-					<span>Click a card to view info</span>
+					<span>Choose a card in the list to view more info</span>
 				)}
 			</main>
 		</>
