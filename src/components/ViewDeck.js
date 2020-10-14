@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
-import DisplayDeckCards from './DisplayDeckCards';
-import ViewDeckCardDisplay from './ViewDeckCardDisplay';
+import DisplayCardsInDeck from './DisplayCardsInDeck';
+import DisplayDeckCard from './DisplayDeckCard';
 import CMCVariety from './CMCVariety';
 import ColorVariety from './ColorVariety';
 import LandVariety from './LandVariety';
@@ -17,17 +17,20 @@ const ViewDeck = (props) => {
 	return (
 		<>
 			<NavBar />
-			<main className="vd-main">
-				<DisplayDeckCards deck={props.deck} onClickFromViewDeck={handleClick} />
+			<main className='vd-main'>
+				<DisplayCardsInDeck
+					deck={props.deck}
+					onClickFromViewDeck={handleClick}
+				/>
 				{clickedCard ? (
-				<ViewDeckCardDisplay card={clickedCard} />
+					<DisplayDeckCard card={clickedCard} />
 				) : (
-				<span>Click a card</span>
+					<span>Click a card</span>
 				)}
 			</main>
 			<div className='charts'>
 				<CMCVariety deck={props.deck} />
-				<div className="doughnut-charts">
+				<div className='doughnut-charts'>
 					<ColorVariety deck={props.deck} />
 					<LandVariety deck={props.deck} />
 				</div>

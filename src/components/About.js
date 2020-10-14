@@ -1,7 +1,11 @@
+//import React
 import React from 'react';
+//import reactstrap NavBar component
 import NavBar from './NavBar';
 
+//create About component
 const About = () => {
+	//return general app info
 	return (
 		<>
 			<NavBar />
@@ -75,4 +79,5 @@ const About = () => {
 	);
 };
 
+//export About component
 export default About;
