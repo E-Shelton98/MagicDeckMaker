@@ -19,6 +19,9 @@ const CardSearch = (props) => {
 		props.onSubmitFromHome(input);
 	};
 
+	
+	///WORKING ON VALIDATING TEXT INSIDE OF SEARCH BOX
+	const isInValid = true
 	//return reactstrap form
 	return (
 		<Form inline onSubmit={handleSubmit}>
@@ -31,6 +34,7 @@ const CardSearch = (props) => {
 						onChange={handleChange}
 						value={input}
 						placeholder='Search for a Card'
+						invalid={isInValid}
 					/>
 				</Col>
 				<Col>

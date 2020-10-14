@@ -36,11 +36,7 @@ const Home = (props) => {
 
 			<CardSearch onSubmitFromHome={handleSubmit} />
 			<main className='home-main'>
-				{cards ? (
-					<CardSearchList cards={cards} onClickFromHome={handleClick} />
-				) : (
-					" "
-				)}
+				<CardSearchList cards={cards} onClickFromHome={handleClick} />
 				{clickedCard ? (
 					<DisplaySearchCard card={clickedCard} addToDeck={props.addToDeck} />
 				) : (
