@@ -17,7 +17,7 @@ const Home = (props) => {
 	};
 
 	const handleClick = (card) => {
-		setClickedCard(card);
+		setClickedCard(card)
 	};
 
 	useEffect(() => {

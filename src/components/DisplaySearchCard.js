@@ -15,13 +15,17 @@ const Example = (props) => {
 	const [amount, setAmount] = useState('');
 	const [card, setCard] = useState();
 
+	if (card !== props.card){
+		setCard(props.card)
+	}
+	
 	const handleSelectChange = (e) => {
 		setAmount(e.currentTarget.value);
-		setCard(props.card)
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
+		console.log('DisplaySearchCard Card and Amount: ', card.name, amount)
 		props.addToDeck(card, amount);
 	};
 
