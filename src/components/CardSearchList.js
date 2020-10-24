@@ -18,7 +18,12 @@ const CardSearchList = (props) => {
 		function displayCards(c, index) {
 			let cardSpan = '';
 			if (c.name) {
-				cardSpan = <span onClick={() => handleClick(c)}>{c.name}</span>;
+				cardSpan = (
+					<div onClick={() => handleClick(c)}>
+						<span>{c.name}</span>
+						<span>{c.cmc}</span>
+					</div>
+				);
 			}
 			return (
 				<div className='cards' key={index}>

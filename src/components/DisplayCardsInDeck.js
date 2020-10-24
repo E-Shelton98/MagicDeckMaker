@@ -1,16 +1,44 @@
 import React from 'react';
 
 const DisplayCardsInDeck = (props) => {
+	
 	let cardDivs = 'Loading...';
 
 	const handleClick = (card) => {
 		props.onClickFromViewDeck(card);
 	};
 
+	let deck = props.deck;
+
+	function cardFilter(card) {
+		return deck.includes(card);
+	}
+
+	const cardAmountCounter = (deck) => {
+		let testDeck = []
+		for(let i = 0; i < deck.length; i++){
+			if (testDeck.includes(deck[i]) === false){
+					let cardAmountArr = deck.filter(cardFilter);
+					console.log('This is cardArray: ', cardAmountArr);
+					let cardAmount = cardAmountArr.length;
+					console.log(cardAmount);
+					testDeck.push(deck[i])
+			}
+		}
+		
+	};
+
+	cardAmountCounter(deck);
+
 	function displayCards(c, index) {
 		let cardSpan = '';
 		if (c.name) {
-			cardSpan = <span onClick={() => handleClick(c)}>{c.name}</span>;
+			cardSpan = (
+				<div onClick={() => handleClick(c)}>
+					<span>{c.name}</span>
+					{/* <span>{counts.name}</span> */}
+				</div>
+			);
 		}
 		return (
 			<div className='deck-card-divs' key={index}>
@@ -18,7 +46,6 @@ const DisplayCardsInDeck = (props) => {
 			</div>
 		);
 	}
-
 	cardDivs = props.deck.map(displayCards);
 
 	return <div className='deck-cards'>{cardDivs}</div>;
